@@ -2,7 +2,7 @@
 # Test Driven Development Exercise in PHP
 ## Project:
 ### Mastermind game
-## specification:
+## Project Specification:
 1. there are 8 turns in the game
    1. in each turn player tries to guess the variation of colours.
       1. there are 8 colours available to choose from.
