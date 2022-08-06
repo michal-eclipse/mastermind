@@ -3,14 +3,14 @@
 ## Project:
 ### Mastermind game
 ## Project Specification:
-1. there are 8 turns in the game
-   1. in each turn player tries to guess the variation of colours.
+1. There are 9 turns in the game
+   1. In each turn player tries to guess the variation of colours.
       1. there are 8 colours available to choose from.
       2. there are 4 fields in each turn to assign colors to.
       3. initially all of the 4 fields has no colours.
       4. the field can be left with no color, so there are total of 9 values (colors) to assign to each of the fields.
 
-2. there is player's guessing result shown after each turn
+2. There is player's guessing result shown after each turn
    1. the guessing result consists of 4 fields
    2. the guessing result field takes 1 of 3 colors: no-color, white, black
    3. before end of the turn and result evaluation all of the 4 fields has no colours.
@@ -21,5 +21,5 @@
          2. next if there are no exact guesses, if one of the field's color in guess is present in the secret but on the different place the guessing result adds white field to the guessing result field sequence.
          3. if no field's color is guessed the guessing result shows 4 fields with no color (empty).
          4. there can't be empty fields either at the beginning or in between of the result sequence fields.
-3. if by the end of the 8th turn result is not guessed, player looses the game, else the game is won.
+3. If by the end of the 9th turn result is not guessed, player looses the game, else the game is won.
 
