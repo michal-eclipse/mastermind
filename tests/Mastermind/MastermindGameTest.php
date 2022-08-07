@@ -4,6 +4,7 @@
 declare(strict_types=1);
 
 use \Mastermind\MastermindGame;
+use \Mastermind\Guess;
 use \Mastermind\Exception\RowOutOfBoundsException;
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +37,7 @@ class MastermindGameTest extends TestCase
             // Then
             for($i = 0; $i < 9; $i++)
             {
-                $this->assertEquals(4, count($this->mastermindGame->getRow($i)));
+                $this->assertEquals(4, count($this->mastermindGame->getGuessRow($i)));
             }
         }
         
@@ -50,7 +51,7 @@ class MastermindGameTest extends TestCase
             $this->expectExceptionMessage('Row index must be between 0 and 8');
 
             // When
-            $this->mastermindGame->getRow(-1);
+            $this->mastermindGame->getGuessRow(-1);
         }
         
         /**
@@ -63,7 +64,7 @@ class MastermindGameTest extends TestCase
             $this->expectExceptionMessage('Row index must be between 0 and 8');
 
             // When
-            $this->mastermindGame->getRow(9);
+            $this->mastermindGame->getGuessRow(9);
         }
         
         /**
@@ -73,9 +74,10 @@ class MastermindGameTest extends TestCase
         {
             // Given
             $currentTurnNumber = $this->mastermindGame->getCurrentTurn();
+            $guess = new Guess();
 
             // When
-            $this->mastermindGame->submitGuess();
+            $this->mastermindGame->submitGuess($guess);
 
             // Then
             $this->assertEquals($currentTurnNumber + 1, $this->mastermindGame->getCurrentTurn());
