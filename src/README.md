@@ -6,9 +6,10 @@
 1. There are 9 turns in the game
    1. In each turn player tries to guess the variation of colours.
       1. there are 8 colours available to choose from.
-      2. there are 4 fields in each turn to assign colors to.
-      3. initially all of the 4 fields has no colours.
-      4. the field can be left with no color, so there are total of 9 values (colors) to assign to each of the fields.
+      2. there are 4 fields in a row in each turn to assign colors to.
+      3. Initially all of the 4 fields in a row has no colours.
+      4. Initially there are 9 rows of fields and player starts first turn from the bottom row and next turns upwards.
+      5. the field can be left with no color, so there are total of 9 values (colors) to assign to each of the fields.
 
 2. There is player's guessing result shown after each turn
    1. the guessing result consists of 4 fields
